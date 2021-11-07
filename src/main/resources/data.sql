@@ -1,0 +1,35 @@
+INSERT INTO ROLE (ID, NAME) VALUES (1, 'ROLE_ADMIN');
+INSERT INTO ROLE (ID, NAME) VALUES (2, 'ROLE_CLIENT');
+INSERT INTO ROLE (ID, NAME) VALUES (3, 'ROLE_SELLER');
+
+INSERT INTO CATEGORY(ID, NAME) VALUES (1, 'BOOKS');
+
+INSERT INTO PRODUCT (ID, CODE, NAME, DESCRIPTION, IMAGE_URL, ACTIVE, UNIT_IN_STOCK,
+UNIT_PRICE, CATEGORY_ID, CREATED_DATE)
+VALUES (1, 'BOOK-TECH-1001', 'Spring Framework Tutorial', 'Learn Spring',
+'assets/images/products/placeholder.png'
+,1,100,29.99,1, NOW());
+
+INSERT INTO PRODUCT (ID, CODE, NAME, DESCRIPTION, IMAGE_URL, ACTIVE, UNIT_IN_STOCK,
+UNIT_PRICE, CATEGORY_ID, CREATED_DATE)
+VALUES (2, 'BOOK-TECH-1002', 'Kubernetes - Deploying Containers', 'Learn Kubernetes',
+'assets/images/products/placeholder.png'
+,1,100,24.99,1, NOW());
+
+INSERT INTO PRODUCT (ID, CODE, NAME, DESCRIPTION, IMAGE_URL, ACTIVE, UNIT_IN_STOCK,
+UNIT_PRICE, CATEGORY_ID, CREATED_DATE)
+VALUES (3, 'BOOK-TECH-1003', 'Internet of Things (IoT) - Getting Started', 'Learn IoT',
+'assets/images/products/placeholder.png'
+,1,100,29.99,1, NOW());
+
+INSERT INTO PRODUCT (ID, CODE, NAME, DESCRIPTION, IMAGE_URL, ACTIVE, UNIT_IN_STOCK,
+UNIT_PRICE, CATEGORY_ID, CREATED_DATE)
+VALUES (4, 'BOOK-TECH-1004', 'The Go Programming Language: A to Z', 'Learn Go',
+'assets/images/products/placeholder.png'
+,1,100,24.99,1, NOW());
+
+INSERT INTO PRODUCT (ID, CODE, NAME, DESCRIPTION, IMAGE_URL, ACTIVE, UNIT_IN_STOCK,
+UNIT_PRICE, CATEGORY_ID,CREATED_DATE)
+VALUES (5, 'BOOK-TECH-1000', 'JavaScript - The Fun Parts', 'Learn JavaScript',
+'assets/images/products/placeholder.png'
+,1,100,19.99,1, NOW());
