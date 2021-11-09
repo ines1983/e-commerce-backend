@@ -1,4 +1,4 @@
-package com.oauth2.google.controller;
+package com.oauth2.google;
 
 import java.util.Date;
 

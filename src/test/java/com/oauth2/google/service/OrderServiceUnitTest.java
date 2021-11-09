@@ -1,12 +1,14 @@
-package com.oauth2.google.controller;
+package com.oauth2.google.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -14,6 +16,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.oauth2.google.DataForTest;
+import com.oauth2.google.exception.NotFoundException;
 import com.oauth2.google.model.order.Order;
 import com.oauth2.google.repository.order.OrderRepository;
 import com.oauth2.google.service.order.OrderServiceImpl;
@@ -27,6 +31,11 @@ public class OrderServiceUnitTest {
     @InjectMocks
     private OrderServiceImpl orderService;
     
+    @BeforeEach
+    void initUseCase() {
+    //	orderService = new OrderServiceImpl(orderRepository);
+    }
+    
     @Test
     void getAllOrdersTest() {
     	Mockito.when(orderRepository.findAll())
@@ -37,11 +46,29 @@ public class OrderServiceUnitTest {
     }
     
     @Test
-    void findOrderById() {
+    void findOrderByIdTest() throws NotFoundException {
     	Mockito.when(orderRepository.findById(1000))
     	.thenReturn(Optional.of(DataForTest.buildOrder(1000)));
-		 List<Order> order = orderService.getAllOrders();
-		 assertEquals(1000, order.get(0).getCode());
+		 Order order = orderService.findOrderById(1000);
+		 assertEquals(1000, order.getCode());
+    }
+    
+    @Test
+    void saveOrderTest() {
+    	Order order = DataForTest.buildOrder(1000);
+    	Mockito.when(orderRepository.save(order)).thenReturn(order);
+    	Order orderDb = orderService.save(order);
+    	assertTrue(orderDb.getCode() != null);
+    }
+    
+    @Test
+    void deleteOrderTest() throws NotFoundException {
+    	Order order = DataForTest.buildOrder(1000);
+    	
+    	Mockito.when(orderRepository.findById(1000)).thenReturn(Optional.of(order));
+    	orderService.deleteOrder(order);
+    	Order orderDb = orderService.findOrderById(1000);
+    	assertTrue(orderDb != null);
     }
     
    }
