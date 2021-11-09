@@ -60,7 +60,7 @@ public class OrderControllerIntegrationTest {
 	 
 	 @Test
 	 void createAProductTest() {
-		 Order order = DataForTest.buildOrder();
+		 Order order = DataForTest.buildOrder(1000);
 		 HttpHeaders headers = new HttpHeaders();
 		 headers.setContentType(MediaType.APPLICATION_JSON);
 		 HttpEntity<Order> postRequest = new HttpEntity<>(order, headers);
@@ -81,7 +81,6 @@ public class OrderControllerIntegrationTest {
 		 assertAll(
 				 () -> assertEquals(getResponse.getStatusCode(), HttpStatus.OK),
 				 () -> assertNotNull(order)
-				 //() -> assertEquals("JavaScript - The Fun Parts", order.getName())
 		 );
 	 }	
 	 

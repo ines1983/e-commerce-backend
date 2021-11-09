@@ -28,14 +28,7 @@ public class Role implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	public static final String USER = "USER";
-		
-	public static final String ROLE_ADMIN = "ROLE_ADMIN";
-	
-	public static final String ROLE_CLIENT = "ROLE_CLIENT";
-
-	public static final String ROLE_SELLER = "ROLE_SELLER";
-
+	//public static final String USER = "USER";
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

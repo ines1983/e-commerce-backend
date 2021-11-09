@@ -57,9 +57,4 @@ public class ProductController {
 	public List<Product> retriveProductsByNameOrDesc(@RequestParam("searchTerm") String searchTerm) {
 		return productService.retriveProductsByNameOrDesc(searchTerm);
 	}
-	
-	/*@GetMapping("/search-by-paramsid")
-	public List<Product> getProductsByParamsId(@RequestBody BodyRequest body) {
-		return service.getProductByParamsId(body.getSearchByName(), body.getSearchByNumberEx(), body.getSearchByType(), body.getCategoryId());
-	}*/
 }

@@ -36,13 +36,13 @@ public class User implements Serializable {
 	@Column(name = "PROVIDER_USER_ID")
 	private String providerUserId;
 
-	@Column(name = "EMAIL")
+	@Column(name = "EMAIL", nullable = false)
 	private String email;
 
 	@Column(name = "ENABLED", columnDefinition = "BIT", length = 1)
 	private boolean enabled;
 
-	@Column(name = "DISPLAY_NAME")
+	@Column(name = "DISPLAY_NAME", nullable = false)
 	private String displayName;
 
 	@Column(name = "created_date", nullable = false, updatable = false)
@@ -52,7 +52,7 @@ public class User implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date modifiedDate;
 
-	@Column(name = "PASSWORD")
+	@Column(name = "PASSWORD", nullable = false)
 	private String password;
 
 	@Column(name = "PROVIDER")
@@ -62,7 +62,7 @@ public class User implements Serializable {
 	private String secret;
 	
 	@Column(name = "TYPE")
-	private String type; 
+	private Role_Type type; 
 
 	//@JsonIgnore
 	@ManyToMany

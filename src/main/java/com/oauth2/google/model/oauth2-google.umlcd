@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_p5o7YEGYEeyXKuOKKBicUg">
+  <modelElement href="oauth2-google.uml#_qPqOsUGYEeyXKuOKKBicUg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_qzcRMEGYEeyXKuOKKBicUg" targetItem="_qzt-CUGYEeyXKuOKKBicUg" sourceItem="_qzbDEEGYEeyXKuOKKBicUg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_qzqToEGYEeyXKuOKKBicUg" sourceAnchor="93.0,0.0" targetAnchor="74.0,90.0" target="_qzt-CUGYEeyXKuOKKBicUg" source="_q2iogEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qf5DEUGYEeyXKuOKKBicUg"/>
+    <stereotypes xmi:id="_qzq6sEGYEeyXKuOKKBicUg" name="Reference">
+      <modelElement href="oauth2-google.uml#_qf8tcEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_qzq6sUGYEeyXKuOKKBicUg" text="">
+      <visualProperties xmi:id="_rBsvoEGYEeyXKuOKKBicUg" position="-39.0,-3.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_qzq6skGYEeyXKuOKKBicUg" aggregationKind="NONE" name="">
+      <modelElement href="oauth2-google.uml#_qf5DEkGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBq6cEGYEeyXKuOKKBicUg" position="-8.0,-46.0"/>
+      <visibility xmi:id="_qzq6s0GYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_qzq6tEGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_qzq6tUGYEeyXKuOKKBicUg" aggregationKind="NONE" name="category" navigable="true">
+      <modelElement href="oauth2-google.uml#_qezd9EGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBtWsEGYEeyXKuOKKBicUg" position="-101.99999999999999,1.0"/>
+      <stereotypes xmi:id="_qzq6tkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe0FAEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_qzq6t0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe0FAUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_qzq6uEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_qzq6uUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_qzt-AEGYEeyXKuOKKBicUg" sourceAnchor="104.0,90.0" targetAnchor="123.0,0.0" target="_q2iogEGYEeyXKuOKKBicUg" source="_qzt-CUGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qfk6AEGYEeyXKuOKKBicUg"/>
+    <stereotypes xmi:id="_qzt-AUGYEeyXKuOKKBicUg" name="Reference">
+      <modelElement href="oauth2-google.uml#_qfrnsEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_qzt-AkGYEeyXKuOKKBicUg" text="">
+      <visualProperties xmi:id="_rBdfEEGYEeyXKuOKKBicUg" position="2.0,-13.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_qzt-A0GYEeyXKuOKKBicUg" aggregationKind="NONE" name="">
+      <modelElement href="oauth2-google.uml#_qfk6AUGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBabwEGYEeyXKuOKKBicUg" position="-17.0,1.0"/>
+      <visibility xmi:id="_qzt-BEGYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_qzt-BUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_qzt-BkGYEeyXKuOKKBicUg" aggregationKind="NONE" name="products" navigable="true">
+      <modelElement href="oauth2-google.uml#_qelbhEGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBeGIEGYEeyXKuOKKBicUg" position="41.0,-46.0"/>
+      <visibility xmi:id="_qzt-B0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_qzt-CEGYEeyXKuOKKBicUg" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_q1Yx8UGYEeyXKuOKKBicUg" targetItem="_q1e4mUGYEeyXKuOKKBicUg" sourceItem="_q1Yx8EGYEeyXKuOKKBicUg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_q1aAEEGYEeyXKuOKKBicUg" sourceAnchor="0.0,28.0" targetAnchor="177.0,121.0" target="_q2iogEGYEeyXKuOKKBicUg" source="_q1e4mUGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qfxHQUGYEeyXKuOKKBicUg"/>
+    <stereotypes xmi:id="_q1b1QkGYEeyXKuOKKBicUg" name="Reference">
+      <modelElement href="oauth2-google.uml#_qf0xoEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_q1bOMEGYEeyXKuOKKBicUg" text="">
+      <visualProperties xmi:id="_rBhwgEGYEeyXKuOKKBicUg" position="-13.0,-19.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_q1b1QEGYEeyXKuOKKBicUg" aggregationKind="NONE" name="">
+      <modelElement href="oauth2-google.uml#_qfxHQkGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBf7UEGYEeyXKuOKKBicUg" position="-27.0,2.0"/>
+      <visibility xmi:id="_q1ccUUGYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_q1ccUEGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_q1b1QUGYEeyXKuOKKBicUg" aggregationKind="NONE" name="product" navigable="true">
+      <modelElement href="oauth2-google.uml#_qet-YEGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBhwgUGYEeyXKuOKKBicUg" position="1.0,-86.0"/>
+      <visibility xmi:id="_q1ccU0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1ccUkGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_q1e4kEGYEeyXKuOKKBicUg" sourceAnchor="89.0,0.0" targetAnchor="87.0,109.0" target="_q1vXQEGYEeyXKuOKKBicUg" source="_q1e4mUGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qf1YsEGYEeyXKuOKKBicUg"/>
+    <stereotypes xmi:id="_q1e4kUGYEeyXKuOKKBicUg" name="Reference">
+      <modelElement href="oauth2-google.uml#_qf5DEEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_q1e4kkGYEeyXKuOKKBicUg" text="">
+      <visualProperties xmi:id="_rBkz0EGYEeyXKuOKKBicUg" position="-39.0,-33.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_q1e4k0GYEeyXKuOKKBicUg" aggregationKind="NONE" name="">
+      <modelElement href="oauth2-google.uml#_qf1YsUGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBjlsEGYEeyXKuOKKBicUg" position="2.0,-70.0"/>
+      <visibility xmi:id="_q1e4lEGYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_q1e4lUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_q1e4lkGYEeyXKuOKKBicUg" aggregationKind="NONE" name="order" navigable="true">
+      <modelElement href="oauth2-google.uml#_qeuldUGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBla4EGYEeyXKuOKKBicUg" position="-45.0,49.0"/>
+      <visibility xmi:id="_q1e4l0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1e4mEGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_q1qewUGYEeyXKuOKKBicUg" targetItem="_q1vXQEGYEeyXKuOKKBicUg" sourceItem="_q1qewEGYEeyXKuOKKBicUg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_q1tiEEGYEeyXKuOKKBicUg" sourceAnchor="0.0,62.0" targetAnchor="174.0,85.0" target="_q1vXQEGYEeyXKuOKKBicUg" source="_q3E0BkGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qgA-4UGYEeyXKuOKKBicUg"/>
+    <stereotypes xmi:id="_q1tiEUGYEeyXKuOKKBicUg" name="Reference">
+      <modelElement href="oauth2-google.uml#_qgEpQEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_q1tiEkGYEeyXKuOKKBicUg" text="">
+      <visualProperties xmi:id="_rBwaAEGYEeyXKuOKKBicUg" position="-30.0,1.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_q1tiE0GYEeyXKuOKKBicUg" aggregationKind="NONE" name="">
+      <modelElement href="oauth2-google.uml#_qgA-4kGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBuk0EGYEeyXKuOKKBicUg" position="-28.0,1.0"/>
+      <visibility xmi:id="_q1uJIEGYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_q1uJIUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_q1uJIkGYEeyXKuOKKBicUg" aggregationKind="NONE" name="orders" navigable="true">
+      <modelElement href="oauth2-google.uml#_qfHnBEGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBwaAUGYEeyXKuOKKBicUg" position="1.0,40.0"/>
+      <stereotypes xmi:id="_q1uJI0GYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfIOEEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1uJJEGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfIOEUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1uJJUGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1uJJkGYEeyXKuOKKBicUg" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_q1uwMEGYEeyXKuOKKBicUg" sourceAnchor="174.0,55.0" targetAnchor="0.0,32.0" target="_q3E0BkGYEeyXKuOKKBicUg" source="_q1vXQEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qfrnsUGYEeyXKuOKKBicUg"/>
+    <stereotypes xmi:id="_q1uwMUGYEeyXKuOKKBicUg" name="Reference">
+      <modelElement href="oauth2-google.uml#_qfxHQEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_q1uwMkGYEeyXKuOKKBicUg" text="">
+      <visualProperties xmi:id="_rBpFQEGYEeyXKuOKKBicUg" position="-30.0,1.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_q1uwM0GYEeyXKuOKKBicUg" aggregationKind="NONE" name="">
+      <modelElement href="oauth2-google.uml#_qfrnskGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBnQEEGYEeyXKuOKKBicUg" position="12.0,-48.0"/>
+      <visibility xmi:id="_q1uwNEGYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_q1uwNUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_q1uwNkGYEeyXKuOKKBicUg" aggregationKind="NONE" name="client" navigable="true">
+      <modelElement href="oauth2-google.uml#_qeps8UGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rBpsUEGYEeyXKuOKKBicUg" position="-66.0,-48.0"/>
+      <visibility xmi:id="_q1uwN0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1uwOEGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_q2dwAEGYEeyXKuOKKBicUg" targetItem="_q2iogEGYEeyXKuOKKBicUg" sourceItem="_q2dI8EGYEeyXKuOKKBicUg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_q3EM8EGYEeyXKuOKKBicUg" sourceAnchor="97.0,261.0" targetAnchor="0.0,68.0" target="_q3XH4EGYEeyXKuOKKBicUg" source="_q3E0BkGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qf8tcUGYEeyXKuOKKBicUg"/>
+    <bendpoints xmi:id="_z1e5cEGYEeyXKuOKKBicUg" sourceY="115" targetX="-132"/>
+    <stereotypes xmi:id="_q3EM8UGYEeyXKuOKKBicUg" name="Reference">
+      <modelElement href="oauth2-google.uml#_qgA-4EGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_q3EM8kGYEeyXKuOKKBicUg" text="">
+      <visualProperties xmi:id="_rB0EYEGYEeyXKuOKKBicUg" position="41.5,-18.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_q3E0AEGYEeyXKuOKKBicUg" aggregationKind="NONE" name="">
+      <modelElement href="oauth2-google.uml#_qf8tckGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rByPMEGYEeyXKuOKKBicUg" position="1.5,28.5"/>
+      <visibility xmi:id="_q3E0AUGYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_q3E0AkGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_q3E0A0GYEeyXKuOKKBicUg" aggregationKind="NONE" name="roles" navigable="true">
+      <modelElement href="oauth2-google.uml#_qfGY5EGYEeyXKuOKKBicUg"/>
+      <visualProperties xmi:id="_rB0EYUGYEeyXKuOKKBicUg" position="-63.375,1.5"/>
+      <visibility xmi:id="_q3E0BEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0BUGYEeyXKuOKKBicUg" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_5mRzYEGYEeyXKuOKKBicUg" targetItem="_q3XH4EGYEeyXKuOKKBicUg" sourceItem="_5mP-MEGYEeyXKuOKKBicUg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_M7waUEGZEeyXKuOKKBicUg" targetItem="_q3E0BkGYEeyXKuOKKBicUg" sourceItem="_M7ulIEGZEeyXKuOKKBicUg"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_qzbDEEGYEeyXKuOKKBicUg" sourceConnectionVisual="_qzcRMEGYEeyXKuOKKBicUg" text="Category entity&#xD;&#xA;&#xD;&#xA;@author Ines Heni&#xD;&#xA; *" item="_qzt-CUGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qfVCYEGYEeyXKuOKKBicUg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_q1Yx8EGYEeyXKuOKKBicUg" sourceConnectionVisual="_q1Yx8UGYEeyXKuOKKBicUg" text="OrderItem entity&#xD;&#xA;&#xD;&#xA;@author Ines Heni&#xD;&#xA; *" item="_q1e4mUGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qfW3k0GYEeyXKuOKKBicUg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_q1qewEGYEeyXKuOKKBicUg" sourceConnectionVisual="_q1qewUGYEeyXKuOKKBicUg" text="Order entity&#xD;&#xA;&#xD;&#xA;@author Ines Heni&#xD;&#xA; *" item="_q1vXQEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qfWQgUGYEeyXKuOKKBicUg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_q2dI8EGYEeyXKuOKKBicUg" sourceConnectionVisual="_q2dwAEGYEeyXKuOKKBicUg" text="Product entity&#xD;&#xA;&#xD;&#xA;@author Ines Heni&#xD;&#xA; *" item="_q2iogEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qfXepkGYEeyXKuOKKBicUg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_q2iogEGYEeyXKuOKKBicUg" comments="_q2dI8EGYEeyXKuOKKBicUg" targetConnectionVisual="_q2dwAEGYEeyXKuOKKBicUg" name="Product" associationsIn="_qzt-AEGYEeyXKuOKKBicUg _q1aAEEGYEeyXKuOKKBicUg" associationsOut="_qzqToEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qRgo0EGYEeyXKuOKKBicUg"/>
+    <visualProperties xmi:id="_q2iogUGYEeyXKuOKKBicUg" position="103.0,-395.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_q2iogkGYEeyXKuOKKBicUg" name="Table">
+      <modelElement href="oauth2-google.uml#_qRnWgEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q2iog0GYEeyXKuOKKBicUg" name="JPA1StyledElement">
+      <modelElement href="oauth2-google.uml#_qRokoEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q2iohEGYEeyXKuOKKBicUg" name="TechnicalSupplement">
+      <modelElement href="oauth2-google.uml#_qRpLsEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q2iohUGYEeyXKuOKKBicUg" name="Annotations">
+      <modelElement href="oauth2-google.uml#_qRrn8EGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <visibility xmi:id="_q2iohkGYEeyXKuOKKBicUg" label="+"/>
+    <attributes xmi:id="_q2ioh0GYEeyXKuOKKBicUg" name="id">
+      <modelElement href="oauth2-google.uml#_qexBsEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2ioiEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qexowEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2ioiUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qexowUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2ioikGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2ioi0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2iojEGYEeyXKuOKKBicUg" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2iojUGYEeyXKuOKKBicUg" name="code">
+      <modelElement href="oauth2-google.uml#_qeyP1EGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2iojkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qey24EGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2ioj0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qey24UGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2iokEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iokUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2iokkGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2iok0GYEeyXKuOKKBicUg" name="category">
+      <modelElement href="oauth2-google.uml#_qezd9EGYEeyXKuOKKBicUg"/>
+      <visibility xmi:id="_q2iolEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iolUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2iolkGYEeyXKuOKKBicUg" name="Category">
+        <modelElement href="oauth2-google.uml#_qQzeMEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2iol0GYEeyXKuOKKBicUg" name="name">
+      <modelElement href="oauth2-google.uml#_qe0sEUGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2iomEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe0sEkGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2iomUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe1TIEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2iomkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iom0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2ionEGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2ionUGYEeyXKuOKKBicUg" name="description">
+      <modelElement href="oauth2-google.uml#_qe16MEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2ionkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe16MUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2ion0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe2hQEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2iooEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iooUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2iookGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2ioo0GYEeyXKuOKKBicUg" name="unitPrice">
+      <modelElement href="oauth2-google.uml#_qe2hRUGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2iopEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe3IUEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2iopUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe3IUUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2iopkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iop0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2ioqEGYEeyXKuOKKBicUg" name="Double">
+        <modelElement href="oauth2-google.uml#_qeSgkEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2ioqUGYEeyXKuOKKBicUg" name="imageUrl">
+      <modelElement href="oauth2-google.uml#_qe3vYEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2ioqkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe3vYUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2ioq0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe4WcEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2iorEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iorUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2iorkGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2ior0GYEeyXKuOKKBicUg" name="active">
+      <modelElement href="oauth2-google.uml#_qe4WdkGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2iosEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe49gEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2iosUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe49gUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2ioskGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2ios0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2iotEGYEeyXKuOKKBicUg" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2iotUGYEeyXKuOKKBicUg" name="unitInStock">
+      <modelElement href="oauth2-google.uml#_qe5kkEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2iotkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe5kkUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2iot0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe6LoEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2iouEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iouUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2ioukGYEeyXKuOKKBicUg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2iou0GYEeyXKuOKKBicUg" name="createdDate">
+      <modelElement href="oauth2-google.uml#_qe6Lo0GYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2iovEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe6LpEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2iovUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe6ysEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2iovkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2iov0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2iowEGYEeyXKuOKKBicUg" name="Date">
+        <modelElement href="oauth2-google.uml#_qdTpIEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q2iowUGYEeyXKuOKKBicUg" name="lastUpdated">
+      <modelElement href="oauth2-google.uml#_qe7ZwEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q2iowkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe7ZwUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q2iow0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe8A0EGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q2ioxEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q2ioxUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q2ioxkGYEeyXKuOKKBicUg" name="Date">
+        <modelElement href="oauth2-google.uml#_qdTpIEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_qzt-CUGYEeyXKuOKKBicUg" comments="_qzbDEEGYEeyXKuOKKBicUg" targetConnectionVisual="_qzcRMEGYEeyXKuOKKBicUg" name="Category" associationsIn="_qzqToEGYEeyXKuOKKBicUg" associationsOut="_qzt-AEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qQzeMEGYEeyXKuOKKBicUg"/>
+    <visualProperties xmi:id="_qzt-CkGYEeyXKuOKKBicUg" position="122.0,-534.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_qzt-C0GYEeyXKuOKKBicUg" name="Table">
+      <modelElement href="oauth2-google.uml#_qQ49wEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_qzt-DEGYEeyXKuOKKBicUg" name="JPA1StyledElement">
+      <modelElement href="oauth2-google.uml#_qQ8BEEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_qzt-DUGYEeyXKuOKKBicUg" name="TechnicalSupplement">
+      <modelElement href="oauth2-google.uml#_qQ-dUEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_qzt-DkGYEeyXKuOKKBicUg" name="Annotations">
+      <modelElement href="oauth2-google.uml#_qRBgoEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <visibility xmi:id="_qzt-D0GYEeyXKuOKKBicUg" label="+"/>
+    <attributes xmi:id="_qzt-EEGYEeyXKuOKKBicUg" name="id">
+      <modelElement href="oauth2-google.uml#_qeiYMEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_qzt-EUGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qei_QEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_qzt-EkGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qei_QUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_qzt-E0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_qzt-FEGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_qzt-FUGYEeyXKuOKKBicUg" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_qzt-FkGYEeyXKuOKKBicUg" name="name">
+      <modelElement href="oauth2-google.uml#_qekNY0GYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_qzt-F0GYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qek0cEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_qzt-GEGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qek0cUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_qzt-GUGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_qzt-GkGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_qzt-G0GYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_qzt-HEGYEeyXKuOKKBicUg" name="products">
+      <modelElement href="oauth2-google.uml#_qelbhEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_qzt-HUGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qemCkUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_qzt-HkGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qempoEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_qzt-H0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_qzt-IEGYEeyXKuOKKBicUg" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_qzt-IUGYEeyXKuOKKBicUg" name="Product">
+        <modelElement href="oauth2-google.uml#_qRgo0EGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_q1vXQEGYEeyXKuOKKBicUg" comments="_q1qewEGYEeyXKuOKKBicUg" targetConnectionVisual="_q1qewUGYEeyXKuOKKBicUg" name="Order" associationsIn="_q1e4kEGYEeyXKuOKKBicUg _q1tiEEGYEeyXKuOKKBicUg" associationsOut="_q1uwMEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qRD84EGYEeyXKuOKKBicUg"/>
+    <visualProperties xmi:id="_q1vXQUGYEeyXKuOKKBicUg" position="351.0,-530.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_q1vXQkGYEeyXKuOKKBicUg" name="Table">
+      <modelElement href="oauth2-google.uml#_qRQKIEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q1vXQ0GYEeyXKuOKKBicUg" name="JPA1StyledElement">
+      <modelElement href="oauth2-google.uml#_qRQxMEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q1vXREGYEeyXKuOKKBicUg" name="TechnicalSupplement">
+      <modelElement href="oauth2-google.uml#_qRRYQEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q1vXRUGYEeyXKuOKKBicUg" name="Annotations">
+      <modelElement href="oauth2-google.uml#_qRSmYEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <visibility xmi:id="_q1vXRkGYEeyXKuOKKBicUg" label="+"/>
+    <attributes xmi:id="_q1vXR0GYEeyXKuOKKBicUg" name="id">
+      <modelElement href="oauth2-google.uml#_qenQsEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1vXSEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qen3wEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1vXSUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qen3wUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1vXSkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1vXS0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1vXTEGYEeyXKuOKKBicUg" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q1vXTUGYEeyXKuOKKBicUg" name="code">
+      <modelElement href="oauth2-google.uml#_qeoe1UGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1vXTkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qepF4EGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1vXT0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qepF4UGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1vXUEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1vXUUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1vXUkGYEeyXKuOKKBicUg" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q1vXU0GYEeyXKuOKKBicUg" name="client">
+      <modelElement href="oauth2-google.uml#_qeps8UGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1vXVEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qeps8kGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1vXVUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qeqUAEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1vXVkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1vXV0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1vXWEGYEeyXKuOKKBicUg" name="User">
+        <modelElement href="oauth2-google.uml#_qR_J8EGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q1vXWUGYEeyXKuOKKBicUg" name="totalPrice">
+      <modelElement href="oauth2-google.uml#_qeq7FUGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1vXWkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qeriIEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1vXW0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qeriIUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1vXXEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1vXXUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1vXXkGYEeyXKuOKKBicUg" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_q1e4mUGYEeyXKuOKKBicUg" comments="_q1Yx8EGYEeyXKuOKKBicUg" targetConnectionVisual="_q1Yx8UGYEeyXKuOKKBicUg" name="OrderItem" associationsOut="_q1aAEEGYEeyXKuOKKBicUg _q1e4kEGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qRUbkEGYEeyXKuOKKBicUg"/>
+    <visualProperties xmi:id="_q1ffoEGYEeyXKuOKKBicUg" position="349.0,-302.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_q1ffoUGYEeyXKuOKKBicUg" name="Table">
+      <modelElement href="oauth2-google.uml#_qRbwUEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q1ffokGYEeyXKuOKKBicUg" name="JPA1StyledElement">
+      <modelElement href="oauth2-google.uml#_qRcXYEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q1ffo0GYEeyXKuOKKBicUg" name="TechnicalSupplement">
+      <modelElement href="oauth2-google.uml#_qRc-cEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q1ffpEGYEeyXKuOKKBicUg" name="Annotations">
+      <modelElement href="oauth2-google.uml#_qRezoEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <visibility xmi:id="_q1ffpUGYEeyXKuOKKBicUg" label="+"/>
+    <attributes xmi:id="_q1ffpkGYEeyXKuOKKBicUg" name="id">
+      <modelElement href="oauth2-google.uml#_qesJMUGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1ffp0GYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qeswQEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1ffqEGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qetXUEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1ffqUGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1ffqkGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1ffq0GYEeyXKuOKKBicUg" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q1ffrEGYEeyXKuOKKBicUg" name="product">
+      <modelElement href="oauth2-google.uml#_qet-YEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1ffrUGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qet-YUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1ffrkGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qeulcEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1ffr0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1ffsEGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1ffsUGYEeyXKuOKKBicUg" name="Product">
+        <modelElement href="oauth2-google.uml#_qRgo0EGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q1ffskGYEeyXKuOKKBicUg" name="order">
+      <modelElement href="oauth2-google.uml#_qeuldUGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1ffs0GYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qevMgEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1fftEGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qevMgUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1fftUGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1fftkGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1fft0GYEeyXKuOKKBicUg" name="Order">
+        <modelElement href="oauth2-google.uml#_qRD84EGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q1ffuEGYEeyXKuOKKBicUg" name="quantity">
+      <modelElement href="oauth2-google.uml#_qevzk0GYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q1ffuUGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qewaoEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q1ffukGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qewaoUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q1ffu0GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q1ffvEGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q1ffvUGYEeyXKuOKKBicUg" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_q3E0BkGYEeyXKuOKKBicUg" comments="_M7ulIEGZEeyXKuOKKBicUg" targetConnectionVisual="_M7waUEGZEeyXKuOKKBicUg" name="User" associationsIn="_q1uwMEGYEeyXKuOKKBicUg" associationsOut="_q1tiEEGYEeyXKuOKKBicUg _q3EM8EGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qR_J8EGYEeyXKuOKKBicUg"/>
+    <visualProperties xmi:id="_q3E0B0GYEeyXKuOKKBicUg" position="633.0,-507.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_q3E0CEGYEeyXKuOKKBicUg" name="Table">
+      <modelElement href="oauth2-google.uml#_qSFQkEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q3E0CUGYEeyXKuOKKBicUg" name="JPA1StyledElement">
+      <modelElement href="oauth2-google.uml#_qSGesEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q3E0CkGYEeyXKuOKKBicUg" name="TechnicalSupplement">
+      <modelElement href="oauth2-google.uml#_qSHFwEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q3E0C0GYEeyXKuOKKBicUg" name="Annotations">
+      <modelElement href="oauth2-google.uml#_qSJiAEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <visibility xmi:id="_q3E0DEGYEeyXKuOKKBicUg" label="+"/>
+    <attributes xmi:id="_q3E0DUGYEeyXKuOKKBicUg" name="id">
+      <modelElement href="oauth2-google.uml#_qe_rMEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0DkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe_rMUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0D0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe_rMkGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0EEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0EUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0EkGYEeyXKuOKKBicUg" name="Long">
+        <modelElement href="oauth2-google.uml#_qeZOQEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0E0GYEeyXKuOKKBicUg" name="providerUserId">
+      <modelElement href="oauth2-google.uml#_qfASQ0GYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0FEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfASREGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0FUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfASRUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0FkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0F0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0GEGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0GUGYEeyXKuOKKBicUg" name="email">
+      <modelElement href="oauth2-google.uml#_qfA5UUGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0GkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfA5UkGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0G0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfA5U0GYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0HEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0HUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0HkGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0H0GYEeyXKuOKKBicUg" name="enabled">
+      <modelElement href="oauth2-google.uml#_qfBgYEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0IEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfBgYUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0IUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfBgYkGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0IkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0I0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0JEGYEeyXKuOKKBicUg" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0JUGYEeyXKuOKKBicUg" name="displayName">
+      <modelElement href="oauth2-google.uml#_qfCHcEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0JkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfCHcUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0J0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfCHckGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0KEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0KUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0KkGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0K0GYEeyXKuOKKBicUg" name="createdDate">
+      <modelElement href="oauth2-google.uml#_qfCugEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0LEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfCugUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0LUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfCugkGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0LkGYEeyXKuOKKBicUg" label="#"/>
+      <cardinality xmi:id="_q3E0L0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0MEGYEeyXKuOKKBicUg" name="Date">
+        <modelElement href="oauth2-google.uml#_qdTpIEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0MUGYEeyXKuOKKBicUg" name="modifiedDate">
+      <modelElement href="oauth2-google.uml#_qfDVlEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0MkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfDVlUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0M0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfD8oEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0NEGYEeyXKuOKKBicUg" label="#"/>
+      <cardinality xmi:id="_q3E0NUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0NkGYEeyXKuOKKBicUg" name="Date">
+        <modelElement href="oauth2-google.uml#_qdTpIEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0N0GYEeyXKuOKKBicUg" name="password">
+      <modelElement href="oauth2-google.uml#_qfD8o0GYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0OEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfD8pEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0OUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfEjsEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0OkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0O0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0PEGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0PUGYEeyXKuOKKBicUg" name="provider">
+      <modelElement href="oauth2-google.uml#_qfEjtEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0PkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfFKwEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0P0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfFKwUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0QEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0QUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0QkGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0Q0GYEeyXKuOKKBicUg" name="secret">
+      <modelElement href="oauth2-google.uml#_qfFKxEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0REGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfFx0EGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0RUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfFx0UGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0RkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0R0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3E0SEGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0SUGYEeyXKuOKKBicUg" name="type">
+      <modelElement href="oauth2-google.uml#_qfFx1EGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0SkGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfGY4EGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0S0GYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfGY4UGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0TEGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0TUGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_M73IAEGZEeyXKuOKKBicUg" name="Role_Type">
+        <modelElement href="oauth2-google.uml#_qR970EGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0T0GYEeyXKuOKKBicUg" name="roles">
+      <modelElement href="oauth2-google.uml#_qfGY5EGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3E0UEGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qfG_8EGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3E0UUGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qfG_8UGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3E0UkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0U0GYEeyXKuOKKBicUg" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_q3E0VEGYEeyXKuOKKBicUg" name="Role">
+        <modelElement href="oauth2-google.uml#_qRv5YEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3E0VUGYEeyXKuOKKBicUg" name="orders">
+      <modelElement href="oauth2-google.uml#_qfHnBEGYEeyXKuOKKBicUg"/>
+      <visibility xmi:id="_q3E0VkGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3E0V0GYEeyXKuOKKBicUg" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_q3E0WEGYEeyXKuOKKBicUg" name="Order">
+        <modelElement href="oauth2-google.uml#_qRD84EGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:EnumerationVisual" xmi:id="_q24mwEGYEeyXKuOKKBicUg" name="Role_Type">
+    <modelElement href="oauth2-google.uml#_qR970EGYEeyXKuOKKBicUg"/>
+    <visualProperties xmi:id="_q24mwUGYEeyXKuOKKBicUg" position="567.0,-168.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_q24mwkGYEeyXKuOKKBicUg" label="+"/>
+    <literals xmi:id="_q24mw0GYEeyXKuOKKBicUg" name="ROLE_ADMIN">
+      <modelElement href="oauth2-google.uml#_qR-i4EGYEeyXKuOKKBicUg"/>
+    </literals>
+    <literals xmi:id="_q24mxEGYEeyXKuOKKBicUg" name="ROLE_CLIENT">
+      <modelElement href="oauth2-google.uml#_qR-i4UGYEeyXKuOKKBicUg"/>
+    </literals>
+    <literals xmi:id="_q24mxUGYEeyXKuOKKBicUg" name="ROLE_SELLER">
+      <modelElement href="oauth2-google.uml#_qR-i4kGYEeyXKuOKKBicUg"/>
+    </literals>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_q3XH4EGYEeyXKuOKKBicUg" comments="_5mP-MEGYEeyXKuOKKBicUg" targetConnectionVisual="_5mRzYEGYEeyXKuOKKBicUg" name="Role" associationsIn="_q3EM8EGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_qRv5YEGYEeyXKuOKKBicUg"/>
+    <visualProperties xmi:id="_q3XH4UGYEeyXKuOKKBicUg" position="862.0,-199.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_q3XH4kGYEeyXKuOKKBicUg" name="Table">
+      <modelElement href="oauth2-google.uml#_qR2nEEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q3XH40GYEeyXKuOKKBicUg" name="JPA1StyledElement">
+      <modelElement href="oauth2-google.uml#_qR3OIEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q3XH5EGYEeyXKuOKKBicUg" name="TechnicalSupplement">
+      <modelElement href="oauth2-google.uml#_qR31MEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_q3XH5UGYEeyXKuOKKBicUg" name="Annotations">
+      <modelElement href="oauth2-google.uml#_qR7fkEGYEeyXKuOKKBicUg"/>
+    </stereotypes>
+    <visibility xmi:id="_q3XH5kGYEeyXKuOKKBicUg" label="+"/>
+    <attributes xmi:id="_q3XH7EGYEeyXKuOKKBicUg" name="id">
+      <modelElement href="oauth2-google.uml#_qe92AEGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3XH7UGYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe92AUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_q3XH7kGYEeyXKuOKKBicUg" name="Annotations">
+        <modelElement href="oauth2-google.uml#_qe-dEEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3XH70GYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3XH8EGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3XH8UGYEeyXKuOKKBicUg" name="Long">
+        <modelElement href="oauth2-google.uml#_qeZOQEGYEeyXKuOKKBicUg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_q3XH8kGYEeyXKuOKKBicUg" name="name">
+      <modelElement href="oauth2-google.uml#_qe-dFkGYEeyXKuOKKBicUg"/>
+      <stereotypes xmi:id="_q3XH80GYEeyXKuOKKBicUg" name="LegacyStyledElement">
+        <modelElement href="oauth2-google.uml#_qe_EIEGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3XH9EGYEeyXKuOKKBicUg" label="-"/>
+      <cardinality xmi:id="_q3XH9UGYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <type xmi:id="_q3XH9kGYEeyXKuOKKBicUg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_q3XH90GYEeyXKuOKKBicUg" name="Role">
+      <modelElement href="oauth2-google.uml#_qR5DUEGYEeyXKuOKKBicUg"/>
+      <keywords xmi:id="_q3XH-EGYEeyXKuOKKBicUg" keyword="create"/>
+      <stereotypes xmi:id="_q3XH-UGYEeyXKuOKKBicUg" name="StyledElement">
+        <modelElement href="oauth2-google.uml#_qR64gUGYEeyXKuOKKBicUg"/>
+      </stereotypes>
+      <visibility xmi:id="_q3XH-kGYEeyXKuOKKBicUg" label="+"/>
+      <cardinality xmi:id="_q3XH-0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_q3XH_EGYEeyXKuOKKBicUg">
+        <modelElement href="oauth2-google.uml#_qR64gEGYEeyXKuOKKBicUg"/>
+        <type xmi:id="_q3XH_UGYEeyXKuOKKBicUg" name="Role">
+          <modelElement href="oauth2-google.uml#_qRv5YEGYEeyXKuOKKBicUg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_q3XH_kGYEeyXKuOKKBicUg" name="name">
+        <modelElement href="oauth2-google.uml#_qR5DUUGYEeyXKuOKKBicUg"/>
+        <cardinality xmi:id="_q3XH_0GYEeyXKuOKKBicUg" label="1" max="1" min="1"/>
+        <type xmi:id="_q3XIAEGYEeyXKuOKKBicUg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_5mP-MEGYEeyXKuOKKBicUg" sourceConnectionVisual="_5mRzYEGYEeyXKuOKKBicUg" text="The persistent class for the role database table.&#xD;&#xA;&#xD;&#xA; @author Ines Heni" item="_q3XH4EGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_5k23EEGYEeyXKuOKKBicUg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_M7ulIEGZEeyXKuOKKBicUg" sourceConnectionVisual="_M7waUEGZEeyXKuOKKBicUg" text="The persistent class for the user database table.&#xD;&#xA; *" item="_q3E0BkGYEeyXKuOKKBicUg">
+    <modelElement href="oauth2-google.uml#_M7LykEGZEeyXKuOKKBicUg"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

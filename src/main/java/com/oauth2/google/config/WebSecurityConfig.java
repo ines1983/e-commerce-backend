@@ -45,31 +45,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
-		/*http.cors().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-		.and().csrf().disable().formLogin().disable().httpBasic().disable()
-				//.exceptionHandling()
-				//.authenticationEntryPoint(new RestAuthenticationEntryPoint())
-        .authorizeRequests()
-        .antMatchers("/", "/h2-console/**", "/error", "/api/all", "/api/auth/**", "/oauth2/**").permitAll()
-        .anyRequest().authenticated()
-        .and()
-        .logout()
-        .logoutSuccessHandler(logoutSuccessHandler())
-        .invalidateHttpSession(true)
-        .clearAuthentication(true)
-        .deleteCookies("JSESSIONID")
-        .and()
-        .oauth2Login()
-        .authorizationEndpoint()
-		.authorizationRequestRepository(cookieAuthorizationRequestRepository())
-		//.and().redirectionEndpoint()
-		.and().userInfoEndpoint()
-		.oidcUserService(customOidcUserService)
-		//.userService(customOAuth2UserService)
-		.and()
-		.successHandler(oAuth2AuthenticationSuccessHandler)
-		.failureHandler(oAuth2AuthenticationFailureHandler);;*/
 		http.cors().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and().csrf().disable().formLogin().disable().httpBasic().disable()
 				.exceptionHandling()
@@ -80,17 +55,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.authenticated()
 				.and().oauth2Login()
 				.authorizationEndpoint()
-				//.authorizationRequestRepository(cookieAuthorizationRequestRepository())
-				//.and().redirectionEndpoint()
 				.and().userInfoEndpoint()
 				.oidcUserService(customOidcUserService)
-				/* .logout(logout -> logout
-			                .logoutSuccessHandler(oidcLogoutSuccessHandler())
-			                .invalidateHttpSession(true)
-			                .clearAuthentication(true)
-			                .deleteCookies("JSESSIONID","CSRF-TOKEN","XSRF-TOKEN")
-			                .permitAll())*/
-				//.userService(customOAuth2UserService)
 				.and()
 				.successHandler(oAuth2AuthenticationSuccessHandler)
 				.failureHandler(oAuth2AuthenticationFailureHandler);

@@ -1,12 +1,12 @@
 package com.oauth2.google.controller;
 
-import java.util.Collections;
 import java.util.Date;
 
 import com.oauth2.google.model.category.Category;
 import com.oauth2.google.model.order.Order;
 import com.oauth2.google.model.order.OrderItem;
 import com.oauth2.google.model.product.Product;
+import com.oauth2.google.model.user.User;
 
 public class DataForTest {
 	
@@ -32,17 +32,24 @@ public class DataForTest {
 	
 	public static OrderItem buildOrderItem() {
 		OrderItem orderItem = new OrderItem();
-		//orderItem.setOrder(buildOrder());
+		orderItem.setOrder(buildOrder(1000));
 		orderItem.setProduct(buildProduct());
 		orderItem.setQuantity(5);
 		return orderItem;
 	}
 	
-	public static Order buildOrder() {
+	public static Order buildOrder(Integer code) {
 		Order order = new Order();
-		OrderItem orderItem = buildOrderItem();
-		order.setOrderItems(Collections.singletonList(orderItem));
+		order.setCode(code);
+		order.setClient(buildUser());
 		return order;
     }
 
+	public static User buildUser() {
+		User user = new User();
+		user.setEmail("admin.admin@gmail.com");
+		user.setDisplayName("Admin Admin");
+		user.setCreatedDate(new Date());
+		return user;
+    }
 }
