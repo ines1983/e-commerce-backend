@@ -44,6 +44,11 @@ public class OrderItemServiceImpl implements OrderItemService {
 	}
 	
 	@Override
+	public OrderItem save(OrderItem orderItem) {
+		return orderItemRepository.save(orderItem);
+	}
+	
+	@Override
 	public List<OrderItem> retrieveOrderItemByOrder() {
 		LocalUser localUser = (LocalUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		Order order = null;
@@ -88,10 +93,10 @@ public class OrderItemServiceImpl implements OrderItemService {
 	}
 	
 	@Override
-	public void updateOrderItem(OrderItem orderItem) {
+	public OrderItem updateOrderItem(OrderItem orderItem) {
 		OrderItem orderItemFromDb = orderItemRepository.findById(orderItem.getId()).get();
 		orderItemFromDb.setQuantity(orderItem.getQuantity());
-		orderItemRepository.save(orderItemFromDb);
+		return orderItemRepository.save(orderItemFromDb);
 	}
 
 }

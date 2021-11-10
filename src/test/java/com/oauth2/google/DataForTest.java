@@ -30,9 +30,10 @@ public class DataForTest {
 		return category;
 	}
 	
-	public static OrderItem buildOrderItem() {
+	public static OrderItem buildOrderItem(Integer code) {
 		OrderItem orderItem = new OrderItem();
-		orderItem.setOrder(buildOrder(1000));
+		orderItem.setId(1);
+		orderItem.setOrder(buildOrder(code));
 		orderItem.setProduct(buildProduct());
 		orderItem.setQuantity(5);
 		return orderItem;

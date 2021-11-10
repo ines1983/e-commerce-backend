@@ -27,6 +27,14 @@ public interface OrderItemService {
 	List<OrderItem> saveAll(List<OrderItem> orderItem);
 	
 	/**
+	 * Save one OrderItem
+	 * 
+	 * @param orderItem
+	 * @return{@OrderItem}
+	 */
+	OrderItem save(OrderItem orderItem);
+	
+	/**
 	 * Retrieve orderItem by order
 	 * 
 	 * @return list of {@OrderItem}
@@ -44,7 +52,8 @@ public interface OrderItemService {
 	 * Update quantity in the order item
 	 * 
 	 * @param orderItem
+	 * @return{@OrderItem}
 	 */
-	void updateOrderItem(OrderItem orderItem);
+	OrderItem updateOrderItem(OrderItem orderItem);
 
 }
