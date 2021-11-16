@@ -5,6 +5,8 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,9 +37,11 @@ public class Role implements Serializable {
 	@Column(name = "ID")
 	private Long id;
 
-	private String name;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "NAME")
+	private RoleType name;
 
-	public Role(String name) {
+	public Role(RoleType name) {
 		this.name = name;
 	}
 }

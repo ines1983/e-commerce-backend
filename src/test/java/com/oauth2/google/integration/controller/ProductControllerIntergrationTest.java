@@ -1,4 +1,4 @@
-package com.oauth2.google.controller.copy;
+package com.oauth2.google.integration.controller;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.boot.json.JacksonJsonParser;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.core.ParameterizedTypeReference;
@@ -21,6 +22,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import com.oauth2.google.DataForTest;
@@ -71,7 +75,7 @@ public class ProductControllerIntergrationTest {
 	 
 	 @Test
 	 void createAProductTest() {
-		 Product product = DataForTest.buildProduct();
+		 Product product = DataForTest.buildProduct(1);
 		 HttpHeaders headers = new HttpHeaders();
 		 headers.setContentType(MediaType.APPLICATION_JSON);
 		 HttpEntity<Product> postRequest = new HttpEntity<>(product, headers);
@@ -106,7 +110,7 @@ public class ProductControllerIntergrationTest {
 
 	@Test
 	void shouldUpdateAProduct() {
-		Product person = DataForTest.buildProduct();
+		Product person = DataForTest.buildProduct(1);
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		HttpEntity<Product> postRequest = new HttpEntity<>(person, headers);
@@ -125,4 +129,26 @@ public class ProductControllerIntergrationTest {
 			() -> assertTrue(response.getBody().contains("Unable to find entry with id 2"))
 		);
 	}	
+	
+	private String obtainAccessToken(String username, String password) throws Exception {
+		 
+	    MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+	    params.add("grant_type", "password");
+	    params.add("client_id", "fooClientIdPassword");
+	    params.add("username", username);
+	    params.add("password", password);
+
+	    ResultActions result 
+	      = mockMvc.perform(post("/oauth/token")
+	        .params(params)
+	        .with(httpBasic("fooClientIdPassword","secret"))
+	        .accept("application/json;charset=UTF-8"))
+	        .andExpect(status().isOk())
+	        .andExpect(content().contentType("application/json;charset=UTF-8"));
+
+	    String resultString = result.andReturn().getResponse().getContentAsString();
+
+	    JacksonJsonParser jsonParser = new JacksonJsonParser();
+	    return jsonParser.parseMap(resultString).get("access_token").toString();
+	}
 }

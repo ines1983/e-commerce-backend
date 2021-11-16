@@ -44,7 +44,7 @@ public class Product implements Serializable {
 	
     @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "CATEGORY_ID", nullable = false)
+    @JoinColumn(name = "CATEGORY_ID", referencedColumnName = "ID", nullable = false)
     private Category category;
 
     @Size(max = 255)

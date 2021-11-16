@@ -13,8 +13,9 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import com.oauth2.google.util.Utils;
 
 /**
+ * A representation of a local user 
  * 
- * @author ih
+ * @author Ines Heni
  *
  */
 public class LocalUser extends User implements OAuth2User, OidcUser {

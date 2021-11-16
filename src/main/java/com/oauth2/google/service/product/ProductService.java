@@ -34,7 +34,7 @@ public interface ProductService {
 	 * @param productId
 	 * @return
 	 */
-	Integer deleteByProductId(long productId);
+	void deleteByProductId(Integer productId);
 	
 	/**
 	 * Search product by name or description

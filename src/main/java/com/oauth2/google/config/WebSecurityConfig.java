@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -23,7 +22,6 @@ import com.oauth2.google.security.oauth2.OAuth2AuthenticationSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -46,7 +44,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.cors().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-		.and().csrf().disable().formLogin().disable().httpBasic().disable()
+		.and().csrf().disable()
+		//.csrf(c -> c
+	      //      .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
 				.exceptionHandling()
 				.authenticationEntryPoint(new RestAuthenticationEntryPoint())
 				.and().authorizeRequests()
@@ -59,7 +59,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.oidcUserService(customOidcUserService)
 				.and()
 				.successHandler(oAuth2AuthenticationSuccessHandler)
-				.failureHandler(oAuth2AuthenticationFailureHandler);
+				.failureHandler(oAuth2AuthenticationFailureHandler)
+				.and()
+				.logout().logoutSuccessUrl("/logout");
 		http.headers().frameOptions().disable();
 
 		// Add our custom Token based authentication filter

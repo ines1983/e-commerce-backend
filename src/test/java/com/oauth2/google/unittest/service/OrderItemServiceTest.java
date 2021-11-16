@@ -1,8 +1,7 @@
-package com.oauth2.google.service.copy;
+package com.oauth2.google.unittest.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -49,11 +48,11 @@ public class OrderItemServiceTest {
     @Test
     public void saveOrderAllTest() {
     	List<OrderItem> orderItems = Stream.of(DataForTest.buildOrderItem(1000), DataForTest.buildOrderItem(2000)).collect(Collectors.toList());
-    	when(orderItemRepository.saveAll(ArgumentMatchers.any(List.class))).thenReturn(orderItems);
-    	List<OrderItem> orderItemSaved = orderItemService.saveAll(Stream.of(DataForTest.buildOrderItem(1000), DataForTest.buildOrderItem(2000)).collect(Collectors.toList()));
+    	when(orderItemRepository.saveAll(orderItems)).thenReturn(orderItems);
+    	List<OrderItem> orderItemSaved = orderItemService.saveAll(orderItems);
     	assertEquals(orderItemSaved.size(), 2);
     	assertEquals(orderItemSaved.get(0).getOrder().getCode(), orderItems.get(0).getOrder().getCode());
-    	verify(orderItemRepository, times(1)).saveAll(ArgumentMatchers.any(List.class));
+    	verify(orderItemRepository).saveAll(orderItems);
     }
     
     @Test

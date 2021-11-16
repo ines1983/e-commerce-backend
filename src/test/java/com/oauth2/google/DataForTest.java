@@ -10,8 +10,9 @@ import com.oauth2.google.model.user.User;
 
 public class DataForTest {
 	
-	public static Product buildProduct() {
+	public static Product buildProduct(Integer id) {
 		Product product = new Product();
+		product.setId(id);
 		product.setCategory(buildCategory());
 		product.setName("JavaScript - The Fun Parts");
 		product.setDescription("Learn JavaScript");
@@ -26,6 +27,7 @@ public class DataForTest {
 	
 	public static Category buildCategory() {
 		Category category = new Category();
+		category.setId(1);
 		category.setName("Books");
 		return category;
 	}
@@ -34,7 +36,7 @@ public class DataForTest {
 		OrderItem orderItem = new OrderItem();
 		orderItem.setId(1);
 		orderItem.setOrder(buildOrder(code));
-		orderItem.setProduct(buildProduct());
+		orderItem.setProduct(buildProduct(1));
 		orderItem.setQuantity(5);
 		return orderItem;
 	}
@@ -50,6 +52,7 @@ public class DataForTest {
 		User user = new User();
 		user.setEmail("admin.admin@gmail.com");
 		user.setDisplayName("Admin Admin");
+		user.setPassword("admin");
 		user.setCreatedDate(new Date());
 		return user;
     }

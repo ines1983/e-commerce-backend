@@ -1,4 +1,4 @@
-package com.oauth2.google.controller;
+package com.oauth2.google.integration.controller;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,20 +24,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import com.oauth2.google.DataForTest;
+import com.oauth2.google.model.order.Order;
 import com.oauth2.google.model.product.Product;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ProductControllerIntergrationTest {
-
+public class OrderControllerIntegrationTest {
+	
 	 @LocalServerPort
 	 private Integer port;
-	 
-	 /*@Autowired
-     private TestRestTemplate testRestTemplate;
-
-     @Autowired
-     private TokenProvider tokenProvider;*/
 	 
 	 private String baseUrl = "http://localhost";
 	 
@@ -50,73 +45,56 @@ public class ProductControllerIntergrationTest {
 	 
 	 @BeforeEach
 	 void setUp(){
-		 baseUrl = baseUrl.concat(":").concat(port.toString()).concat("/api/products");
+		 baseUrl = baseUrl.concat(":").concat(port.toString()).concat("/api/orders");
 	 } 
 	 
 	 @Test
-	 public void authenticationTest() {
-		 
-	 }
-	
-	 @Test
      public void findAllProductTest() {
-	 	ResponseEntity<List<Product>> responseEntity = restTemplate.exchange(baseUrl.concat("/all"),
-			    HttpMethod.GET,  null, new ParameterizedTypeReference<List<Product>>() {});
+	 	ResponseEntity<List<Order>> responseEntity = restTemplate.exchange(baseUrl.concat("/all"),
+			    HttpMethod.GET,  null, new ParameterizedTypeReference<List<Order>>() {});
 	 
-	 	List<Product> products = responseEntity.getBody();
+	 	List<Order> orders = responseEntity.getBody();
 	 	assertAll(
-	 			() -> assertNotNull(products),
-	 			() -> assertTrue(products.size() > 0));
+	 			() -> assertNotNull(orders),
+	 			() -> assertTrue(orders.size() > 0));
      }
 	 
 	 @Test
 	 void createAProductTest() {
-		 Product product = DataForTest.buildProduct();
+		 Order order = DataForTest.buildOrder(1000);
 		 HttpHeaders headers = new HttpHeaders();
 		 headers.setContentType(MediaType.APPLICATION_JSON);
-		 HttpEntity<Product> postRequest = new HttpEntity<>(product, headers);
-		 ResponseEntity<Product> postResponse = restTemplate.postForEntity(baseUrl.concat("/create"), postRequest, Product.class);
-		 Product newProduct = postResponse.getBody();
+		 HttpEntity<Order> postRequest = new HttpEntity<>(order, headers);
+		 ResponseEntity<Order> postResponse = restTemplate.postForEntity(baseUrl.concat("/create"), postRequest, Order.class);
+		 Order newOrder = postResponse.getBody();
 		 assertAll(
 				 () -> assertEquals(postResponse.getStatusCode(), HttpStatus.CREATED),
-				 () -> assertNotNull(newProduct),
-				 () -> assertEquals(product.getName(), newProduct.getName()),
-				 () -> assertNotNull(newProduct.getId())
+				 () -> assertNotNull(newOrder),
+				 () -> assertEquals(order.getTotalPrice(), newOrder.getTotalPrice()),
+				 () -> assertNotNull(newOrder.getId())
 		 );
 	 }
-	 
+	
 	 @Test
-	 void foundProductTest(){
-		 ResponseEntity<Product> getResponse = restTemplate.getForEntity(baseUrl.concat("/find/{id}"), Product.class, 1);
-		 Product product = getResponse.getBody();
+	 void foundOrderTest(){
+		 ResponseEntity<Order> getResponse = restTemplate.getForEntity(baseUrl.concat("/find/{id}"), Order.class, 1);
+		 Order order = getResponse.getBody();
 		 assertAll(
 				 () -> assertEquals(getResponse.getStatusCode(), HttpStatus.OK),
-				 () -> assertNotNull(product),
-				 () -> assertEquals("JavaScript - The Fun Parts", product.getName())
+				 () -> assertNotNull(order)
 		 );
 	 }	
 	 
 	 @Test
-	 void productNotFoundTest(){
-		 ResponseEntity<Product> getResponse = restTemplate.getForEntity(baseUrl.concat("/find/{id}"), Product.class, 10);
+	 void orderNotFoundTest(){
+		 ResponseEntity<Order> getResponse = restTemplate.getForEntity(baseUrl.concat("/find/{id}"), Order.class, 10);
 		 assertAll(
 				 () -> assertEquals(getResponse.getStatusCode(), HttpStatus.NOT_FOUND)
 		 );
 	 }
-
-	@Test
-	void shouldUpdateAProduct() {
-		Product person = DataForTest.buildProduct();
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
-		HttpEntity<Product> postRequest = new HttpEntity<>(person, headers);
-		ResponseEntity<Product> responseEntity = restTemplate.exchange(baseUrl.concat("/{id}"), HttpMethod.PUT,
-				postRequest, Product.class, 1);
-		assertEquals(HttpStatus.NO_CONTENT, responseEntity.getStatusCode());
-	}
 	 
-	@Test
-	void deleteAProductTest() {
+	 @Test
+	 void deleteAOrderTest() {
 		restTemplate.delete(baseUrl.concat("/delete/2"));
 		ResponseEntity<String> response = restTemplate.getForEntity(baseUrl + "/delete/{id}", String.class, 2);
 		assertAll(
@@ -124,5 +102,18 @@ public class ProductControllerIntergrationTest {
 			() -> assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode()),
 			() -> assertTrue(response.getBody().contains("Unable to find entry with id 2"))
 		);
-	}	
+	 }
+	 
+	 @Test
+	 void searchByNameOrDescriptionTest() {
+		 ResponseEntity<Order> getResponse = restTemplate.getForEntity(baseUrl.concat("/find/{id}"), Order.class, 1);
+		 Order order = getResponse.getBody();
+		 ResponseEntity<List<Product>> responseEntity = restTemplate.exchange(baseUrl.concat("/search-by-name-description?orderId=" + order.getId() + "searchTerm=JavaScript"),
+				    HttpMethod.GET,  null, new ParameterizedTypeReference<List<Product>>() {});
+		 
+		 List<Product> orders = responseEntity.getBody();
+		 assertAll(
+		 			() -> assertNotNull(orders),
+		 			() -> assertTrue(orders.size() > 0));
+	 }
 }

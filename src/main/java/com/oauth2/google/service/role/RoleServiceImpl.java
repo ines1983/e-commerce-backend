@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.oauth2.google.model.user.Role;
+import com.oauth2.google.model.user.RoleType;
 import com.oauth2.google.repository.role.RoleRepository;
 
 @Service
@@ -19,7 +20,7 @@ public class RoleServiceImpl implements RoleService {
 	}
 
 	@Override
-	public Role findByName(String name) {
+	public Role findByName(RoleType name) {
 		return roleRepository.findByName(name);
 	}
 	

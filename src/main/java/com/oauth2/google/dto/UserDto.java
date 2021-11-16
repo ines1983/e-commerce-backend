@@ -2,6 +2,8 @@ package com.oauth2.google.dto;
 
 import java.io.Serializable;
 
+import com.oauth2.google.model.user.RoleType;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +15,6 @@ public class UserDto implements Serializable {
 
 	private Long id;
 	
-	private String role;
+	private RoleType role;
 
 }

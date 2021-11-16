@@ -62,7 +62,7 @@ public class User implements Serializable {
 	private String secret;
 	
 	@Column(name = "TYPE")
-	private Role_Type type; 
+	private String type; 
 
 	//@JsonIgnore
 	@ManyToMany

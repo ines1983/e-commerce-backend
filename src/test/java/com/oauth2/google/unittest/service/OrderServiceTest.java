@@ -1,4 +1,4 @@
-package com.oauth2.google.service;
+package com.oauth2.google.unittest.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -23,7 +23,7 @@ import com.oauth2.google.repository.order.OrderRepository;
 import com.oauth2.google.service.order.OrderServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
-public class OrderServiceUnitTest {
+public class OrderServiceTest {
 	
 	@Mock
     private OrderRepository orderRepository;

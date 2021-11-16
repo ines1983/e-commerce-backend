@@ -1,6 +1,7 @@
 package com.oauth2.google.service.role;
 
 import com.oauth2.google.model.user.Role;
+import com.oauth2.google.model.user.RoleType;
 
 public interface RoleService {
 	
@@ -10,7 +11,7 @@ public interface RoleService {
 	 * @param name
 	 * @return {@link Role}
 	 */
-	Role findByName(String name);
+	Role findByName(RoleType name);
 	
 	/**
 	 * Save role

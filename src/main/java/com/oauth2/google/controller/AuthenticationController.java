@@ -1,5 +1,8 @@
 package com.oauth2.google.controller;
 
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +31,9 @@ public class AuthenticationController {
 
 	@Autowired
 	private TokenProvider tokenProvider;
+	
+	/*@Autowired
+    private ConsumerTokenServices tokenService;*/
 
 
 	@PostMapping("/signin")
@@ -39,13 +45,24 @@ public class AuthenticationController {
 		return ResponseEntity.ok(new JwtAuthenticationResponse(jwt, true, Utils.buildUserInfo(localUser)));
 	}
 	
-/*	@PostMapping("/logout")
-	public ResponseEntity<String> revoke(HttpServletRequest request) {
-	    try {
+	@PostMapping("/logout")
+	public ResponseEntity<String> revoke(HttpServletRequest request, HttpServletResponse response) {
+	    /*try {
 	        String authorization = request.getHeader("Authorization");
 	        if (authorization != null && authorization.contains("Bearer")) {
+	        	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	        	
 	            String tokenValue = authorization.replace("Bearer", "").trim();
-
+	            new SecurityContextLogoutHandler().logout(request, null, null);
+	            LocalUser oidcUser = (LocalUser) auth.getPrincipal();
+	            tokenService.revokeToken(tokenValue);
+	            
+	            try {
+	                //sending back to client app
+	                response.sendRedirect(request.getHeader("referer"));
+	            } catch (IOException e) {
+	                e.printStackTrace();
+	            }
 	            OAuth2AccessToken accessToken = tokenStore.readAccessToken(tokenValue);
 	            tokenStore.removeAccessToken(accessToken);
 
@@ -55,8 +72,8 @@ public class AuthenticationController {
 	        }
 	    } catch (Exception e) {
 	        return ResponseEntity.badRequest().body("Invalid access token");
-	    }
+	    }*/
 
-	    return ResponseEntity.ok().body("Access token invalidated successfully");
-	}*/
+	    return ResponseEntity.ok().body("ok");
+	}
 }

@@ -20,7 +20,7 @@ import com.oauth2.google.dto.UserDto;
 import com.oauth2.google.exception.OAuth2AuthenticationProcessingException;
 import com.oauth2.google.exception.UserAlreadyExistAuthenticationException;
 import com.oauth2.google.model.user.Role;
-import com.oauth2.google.model.user.Role_Type;
+import com.oauth2.google.model.user.RoleType;
 import com.oauth2.google.model.user.User;
 import com.oauth2.google.repository.role.RoleRepository;
 import com.oauth2.google.repository.user.UserRepository;
@@ -125,7 +125,7 @@ public class UserServiceImpl implements UserService {
 		user.setEmail(formDTO.getEmail());
 		user.setPassword(new BCryptPasswordEncoder().encode(formDTO.getPassword()));
 		HashSet<Role> roles = new HashSet<Role>();
-		roles.add(roleRepository.findByName(Role_Type.ROLE_CLIENT.toString()));
+		roles.add(roleRepository.findByName(RoleType.ROLE_CLIENT));
 		user.setRoles(roles);
 		user.setProvider(formDTO.getSocialProvider().getProviderType());
 		user.setEnabled(true);

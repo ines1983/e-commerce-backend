@@ -16,13 +16,6 @@ import com.oauth2.google.model.product.Product;
  *
  */
 public interface ProductRepository extends JpaRepository<Product, Integer> {
-
-	/**
-	 * 
-	 * @param productId
-	 * @return
-	 */
-	Integer deleteById(long id);
 	
 	@Query("SELECT product FROM Product product "
 			+ "WHERE product.name like %:searchTerm% "
